@@ -1,0 +1,99 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: black;
+  margin: 20px;
+  font-size: 18px;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid rgb(235, 231, 231);
+  padding: 10px;
+  background-color: rgb(148, 23, 23);
+}
+
+#logo {
+  width: 150px;
+  height: auto;
+}
+
+#menu {
+  display: flex;
+  gap: 20px;
+}
+
+#menu a {
+  border: 2px solid black;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#main {
+  border: 2px solid rgb(0, 0, 0);
+  background-color: white;
+  display: flex;
+  padding: 15px;
+  gap: 20px;
+}
+
+#aside {
+  flex: 1;
+  background: lightgray;
+  border: 2px solid black;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+#biografia {
+  flex: 3;
+}
+
+#aside h2 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: white;
+  background-color: rgb(65, 62, 62);
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+#imagem {
+  float: left;
+  margin: 0 15px 10px 0;
+  border-radius: 15%;
+  width: 200px;
+  height: 200px;
+}
+
+#footer {
+  border: 2px solid rgb(199, 190, 190);
+  background-color: rgb(148, 23, 23);
+  justify-content: center;
+  display: flex;
+  padding: 10px;
+  gap: 20px;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+#footer a {
+  border: 2px solid black;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#redes {
+  border: 2px solid black;
+}
