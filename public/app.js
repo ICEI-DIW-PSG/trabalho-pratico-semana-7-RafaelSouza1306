@@ -1,3 +1,4 @@
+
 const obras = [
   {
     id: 1,
@@ -21,9 +22,10 @@ const obras = [
     imagem: "https://upload.wikimedia.org/wikipedia/pt/0/05/BocasOrdinarias.jpg"
   }
 ];
-const container = document.getElementById("cards-container");
-if (container) {
 
+const cardsContainer = document.getElementById("cards-container");
+
+if (cardsContainer) {
   obras.forEach((obra) => {
     const card = document.createElement("div");
     card.classList.add("col-md-4", "mb-3");
@@ -39,26 +41,24 @@ if (container) {
       </div>
     `;
 
-    container.appendChild(card);
+    cardsContainer.appendChild(card);
   });
 }
 
-// Verifica se está na página de detalhes
 if (window.location.pathname.includes("detalhes.html")) {
   const params = new URLSearchParams(window.location.search);
   const id = parseInt(params.get("id"));
 
   const obra = obras.find((o) => o.id === id);
+  const detalhesContainer = document.getElementById("detalhes-container");
 
-  const container = document.getElementById("detalhes-container");
-
-  if (obra) {
-    container.innerHTML = `
+  if (obra && detalhesContainer) {
+    detalhesContainer.innerHTML = `
       <h2>${obra.titulo} (${obra.ano})</h2>
-      <img src="${obra.imagem}" alt="${obra.titulo}" style="max-width:300px;">
+      <img src="${obra.imagem}" alt="${obra.titulo}" style="max-width:300px; display: block; margin: 20px 0;">
       <p>${obra.descricao}</p>
     `;
-  } else {
-    container.innerHTML = "<p>Obra não encontrada.</p>";
+  } else if (detalhesContainer) {
+    detalhesContainer.innerHTML = "<p>Obra não encontrada.</p>";
   }
 }

@@ -97,3 +97,53 @@ body {
 #redes {
   border: 2px solid black;
 }
+body.detalhes-page {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  line-height: 1.6;
+}
+
+body.detalhes-page header {
+  border-bottom: 2px solid white;
+  margin-bottom: 20px;
+}
+
+body.detalhes-page h1 {
+  font-size: 2rem;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+body.detalhes-page #detalhes-container {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+body.detalhes-page #detalhes-container h2 {
+  margin-top: 0;
+}
+
+body.detalhes-page #detalhes-container img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 15px 0;
+  display: block;
+}
+
+body.detalhes-page a {
+  color: #66b2ff;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+body.detalhes-page a:hover {
+  text-decoration: underline;
+}
