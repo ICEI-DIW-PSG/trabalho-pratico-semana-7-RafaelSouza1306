@@ -43,3 +43,22 @@ if (container) {
   });
 }
 
+// Verifica se está na página de detalhes
+if (window.location.pathname.includes("detalhes.html")) {
+  const params = new URLSearchParams(window.location.search);
+  const id = parseInt(params.get("id"));
+
+  const obra = obras.find((o) => o.id === id);
+
+  const container = document.getElementById("detalhes-container");
+
+  if (obra) {
+    container.innerHTML = `
+      <h2>${obra.titulo} (${obra.ano})</h2>
+      <img src="${obra.imagem}" alt="${obra.titulo}" style="max-width:300px;">
+      <p>${obra.descricao}</p>
+    `;
+  } else {
+    container.innerHTML = "<p>Obra não encontrada.</p>";
+  }
+}
